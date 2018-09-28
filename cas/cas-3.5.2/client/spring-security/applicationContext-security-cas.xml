@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<sec:http pattern="/resources/**" security="none" />
+	<sec:http pattern="/timeout.html" security="none" />
+	<sec:http pattern="/login" security="none"/>
+	<sec:http pattern="/services" security="none"/>
+	<sec:http pattern="/static/**" security="none"/>
+	<sec:http pattern="/common/**" security="none"/>
+	<sec:http pattern="/img/**" security="none"/>
+	<sec:http pattern="/css/**" security="none"/>
+	<sec:http pattern="/js/**" security="none"/>
+	<sec:http pattern="/boots/**" security="none"/>
+
+	<sec:http entry-point-ref="casProcessingFilterEntryPoint">
+		<sec:session-management invalid-session-url="/home">
+			<sec:concurrency-control max-sessions="10"
+				error-if-maximum-exceeded="true" />
+		</sec:session-management>
+		<!-- cas退出登录 -->
+		<sec:logout logout-success-url="${cas.server.outurl}/logout?service=${casClientRoot}" logout-url="/j_spring_security_logout" />
+		<!-- CAS_FILTER filter拦截 -->
+		<sec:custom-filter ref="casAuthenticationFilter" position="CAS_FILTER" />
+		<!-- SECURITY filter拦截 -->
+		<sec:custom-filter ref="customFilter" before="FILTER_SECURITY_INTERCEPTOR" />
+	</sec:http>
+
+	<sec:authentication-manager alias="authenticationManager">
+		<sec:authentication-provider ref="casAuthenticationProvider" />
+	</sec:authentication-manager>
+	<!-- SECURITY filter拦截 -->
+	<bean id="customFilter" class="cn.com.wavenet.security.filter.WavenetSecurityFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager" ref="customAccessDecisionManager" />
+		<property name="securityMetadataSource" ref="wavenetSecurityMetadataSource" />
+	</bean>
+
+	<bean id="customAccessDecisionManager" class="cn.com.wavenet.security.filter.WavenetAccessDecisionManager">
+	</bean>
+	
+	<!-- 资源访问 -->
+    <bean id="wavenetSecurityMetadataSource" class="cn.com.wavenet.security.filter.WavenetSecurityMetadataSource">  
+    	<constructor-arg name="dataManagerImpl" ref="dataManagerImpl"></constructor-arg>  
+    </bean>
+
+	<bean id="casAuthenticationFilter"
+		class="org.springframework.security.cas.web.CasAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="authenticationFailureHandler">
+			<bean
+				class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+				<property name="defaultFailureUrl" value="/time4out.html" />
+			</bean>
+		</property>
+		<property name="authenticationSuccessHandler">
+			<!-- SavedRequest允许在Session失败重新登录后，回到失效前的页面 -->
+			<bean
+				class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+				<property name="defaultTargetUrl" value="/home" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="casProcessingFilterEntryPoint"
+		class="org.springframework.security.cas.web.CasAuthenticationEntryPoint">
+		<property name="loginUrl" value="${cas.server.loginUrl}" />
+		<property name="serviceProperties" ref="serviceProperties" />
+	</bean>
+
+	<bean id="casAuthenticationProvider"
+		class="org.springframework.security.cas.authentication.CasAuthenticationProvider">
+		<property name="authenticationUserDetailsService" ref="cn.com.wavenet.security.service.UserDetailsService"></property>
+		<property name="serviceProperties" ref="serviceProperties" />
+		<property name="ticketValidator">
+			<bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+				<constructor-arg index="0"
+					value="${cas.server.url}" />
+			</bean>
+		</property>
+		<property name="key" value="an_id_for_this_auth_provider_only" />
+	</bean>
+
+	<bean id="serviceProperties" class="org.springframework.security.cas.ServiceProperties">
+		<property name="service"
+			value="${casClientRoot}/j_spring_cas_security_check" />
+		<property name="sendRenew" value="${cas.server.renew}" />
+	</bean>
+	<!-- 登录message -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    	<property name="basename" value="classpath:messages_zh_CN" />
+    	</bean>
+</beans>
