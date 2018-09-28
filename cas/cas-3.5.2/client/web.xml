@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<display-name>wavenet</display-name>
+
+	
+	
+	<!-- CAS 单点登录(SSO) 过滤器配置 (start) -->  
+      
+    <!-- 该过滤器用于实现单点登出功能。-->  
+    <filter>  
+        <filter-name>CAS Single Sign Out Filter</filter-name>  
+        <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>CAS Single Sign Out Filter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+    <!-- CAS: 用于单点退出 -->  
+    <listener>  
+        <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>  
+    </listener>  
+      
+    <!-- 该过滤器负责用户的认证工作，必须启用它 -->  
+    <filter>  
+        <filter-name>CASFilter</filter-name>  
+        <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>  
+        <init-param>  
+            <param-name>casServerLoginUrl</param-name>  
+            <!-- 下面的URL是Cas服务器的登录地址 -->  
+            <param-value>http://172.18.1.10:8091/cas/login</param-value>  
+        </init-param>  
+        <init-param>  
+            <param-name>serverName</param-name>  
+            <!-- 下面的URL是具体某一个应用的访问地址 -->  
+            <param-value>http://127.0.0.1:8080</param-value>  
+        </init-param>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>CASFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+       
+    <!-- 该过滤器负责对Ticket的校验工作，必须启用它 -->  
+    <filter>  
+        <filter-name>CAS Validation Filter</filter-name>  
+        <filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>  
+        <init-param>  
+            <param-name>casServerUrlPrefix</param-name>  
+            <!-- 下面的URL是Cas服务器的认证地址 -->  
+            <param-value>http://172.18.1.10:8091/cas</param-value>  
+        </init-param>  
+        <init-param>  
+            <param-name>serverName</param-name>  
+            <!-- 下面的URL是具体某一个应用的访问地址 -->  
+            <param-value>http://127.0.0.1:8080</param-value>  
+        </init-param>  
+        <init-param>  
+          <param-name>renew</param-name>  
+          <param-value>false</param-value>  
+        </init-param>  
+        <init-param>  
+          <param-name>gateway</param-name>  
+          <param-value>false</param-value>  
+        </init-param>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>CAS Validation Filter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+       
+    <!--  
+    该过滤器负责实现HttpServletRequest请求的包裹，  
+    比如允许开发者通过HttpServletRequest的getRemoteUser()方法获得SSO登录用户的登录名，可选配置。  
+    -->  
+    <filter>  
+        <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>  
+        <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+       
+    <!--  
+    该过滤器使得开发者可以通过org.jasig.cas.client.util.AssertionHolder来获取用户的登录名。  
+    比如AssertionHolder.getAssertion().getPrincipal().getName()。  
+    -->  
+    <filter>  
+        <filter-name>CAS Assertion Thread Local Filter</filter-name>  
+        <filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>CAS Assertion Thread Local Filter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+       
+    <!-- 自动根据单点登录的结果设置本系统的用户信息（具体某一个应用实现） -->  
+    <filter>  
+        <filter-name>CasForInvokeContextFilter</filter-name>  
+        <filter-class>cn.com.wavenet.shslc.login.CasLoginFilter</filter-class>  
+        <init-param>  
+          <param-name>appId</param-name>  
+          <param-value>a5ea611bbff7474a81753697a1714fb0</param-value>  
+        </init-param>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>CasForInvokeContextFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+    <!-- CAS 单点登录(SSO) 过滤器配置 (end) -->  
+	
+	<listener>
+		<listener-class>cn.com.wavenet.hydro.servlet.ContenxtListen</listener-class>
+	</listener>
+
+	<!-- 下面是我在后文将要提到的一个servlet的设置，注意根据自己程序设置servlet-class和servlet-name区域的值 -->
+	<servlet>
+		<servlet-name>MySevlet</servlet-name>
+		<servlet-class>cn.com.wavenet.hydro.dwrserver.MySevlet</servlet-class>
+	</servlet>
+
+	<!-- 下面是我在后文将要提到的一个servlet的设置，注意根据自己程序设置url-pattern区域的值 -->
+	<servlet-mapping>
+		<servlet-name>MySevlet</servlet-name>
+		<url-pattern>/server/push</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/shdike/struts-project-config.xml,
+			/WEB-INF/hydro/struts-hydro-config.xml,
+			/WEB-INF/hydro/struts-hydro-ajax-config.xml,
+			/WEB-INF/shdike/struts-project-ajax-config.xml,
+			/WEB-INF/shslc/struts-project-ajax-config.xml,
+			/WEB-INF/shslc/struts-project-config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/classes/spring/applicationContext.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>ApplicationResources</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- 生成验证码 -->
+	<servlet>
+		<servlet-name>imageRandServlet</servlet-name>
+		<servlet-class>cn.com.wavenet.hydro.servlet.ImageRandServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>imageRandServlet</servlet-name>
+		<url-pattern>/servlet/imageRandServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>cn.com.wavenet.hydro.servlet.InitServlet</servlet-class>
+		<init-param>
+			<param-name>begin</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>basPath</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>projectName</param-name>
+			<param-value>上海市水利河道巡查管理系统</param-value>
+		</init-param>
+		<init-param>
+			<param-name>projectID</param-name>
+			<param-value>shslc</param-value>
+		</init-param>
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+
+<!-- 	<filter>
+		<filter-name>Set Character Encoding</filter-name>
+		<filter-class>
+			com.huahang.tj.struts.filters.SetCharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ignore</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>Set Character Encoding</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping> -->
+	<!-- 测试监听 begin -->
+	<listener>
+		<listener-class>cn.com.wavenet.hydro.servlet.GlobalRequestListener</listener-class>
+	</listener>
+
+	<!-- end -->
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>0</session-timeout>
+	</session-config>
+
+
+	<welcome-file-list>
+		<welcome-file>casChecklogin.do</welcome-file>
+	</welcome-file-list>
+
+	<mime-mapping>
+		<extension>xls</extension>
+		<mime-type>application/msexcel</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>doc</extension>
+		<mime-type>application/msword</mime-type>
+	</mime-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/axis2-web/Error/error404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/axis2-web/Error/error500.jsp</location>
+	</error-page>
+
+	<taglib>
+		<taglib-uri>
+			http://jakarta.apache.org/struts/tags-bean
+		</taglib-uri>
+		<taglib-location>/WEB-INF/hydro/struts-bean.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>
+			http://jakarta.apache.org/struts/tags-html
+		</taglib-uri>
+		<taglib-location>/WEB-INF/hydro/struts-html.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>
+			http://jakarta.apache.org/struts/tags-logic
+		</taglib-uri>
+		<taglib-location>/WEB-INF/hydro/struts-logic.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>
+			http://jakarta.apache.org/struts/tags-tiles
+		</taglib-uri>
+		<taglib-location>/WEB-INF/hydro/struts-tiles.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://www.wavenet.com.cn/struts/extend</taglib-uri>
+		<taglib-location>/WEB-INF/hydro/struts-extend.tld</taglib-location>
+	</taglib>
+
+</web-app>
