@@ -1,1 +1,82 @@
-<mxfile host="app.diagrams.net" modified="2021-09-27T02:06:58.752Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" version="14.8.6" etag="9Yj8fz157zpM6GnrBNz9" type="github"><diagram id="Ajt4dk3aIRRKyQv-2onF">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-09-27T02:27:28.918Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="dJaI9OmiPoqY2ukuhCcD" version="14.8.6" type="github">
+  <diagram id="Ajt4dk3aIRRKyQv-2onF" name="Page-1">
+    <mxGraphModel dx="1351" dy="923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aoL08-PM75Ri6AFvirWw-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="760" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-2" value="&lt;div class=&quot;lake-content&quot;&gt;&lt;h3 id=&quot;ZoniR&quot; style=&quot;font-size: 20 ; line-height: 28px ; margin: 16px 0 5px 0&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;&lt;font style=&quot;font-size: 22px&quot;&gt;Might-Data-Manage&lt;/font&gt;&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="69" y="100" width="701" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="104.5" y="270" width="190" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="323.5" y="270" width="190" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="544.5" y="270" width="190" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-11" value="Dgraph" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="127" y="315" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-12" value="Mysql" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="127" y="410" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-13" value="Redis" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="127" y="510" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-14" value="Es" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="127" y="600" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-16" value="分库分表" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="359.5" y="315" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-17" value="读写分离" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="359.5" y="370" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-18" value="Schema管理" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="359.5" y="427.5" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-21" value="数据质检" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="358.5" y="482.5" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-22" value="分布式id生成" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="358.5" y="540" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-23" value="事务管理" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="358.5" y="600" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-24" value="CRUD" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="358.5" y="655" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-25" value="集群扩缩容" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="580" y="315" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-26" value="数据导出" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="580" y="370" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-27" value="图可视化" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="580" y="427.5" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-28" value="日志审计" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="579" y="482.5" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-29" value="数据归档" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="579" y="540" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-34" value="存储" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="104.5" y="189" width="191" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-35" value="操作" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="322.5" y="189" width="191" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aoL08-PM75Ri6AFvirWw-36" value="其它" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="544.5" y="189" width="191" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
