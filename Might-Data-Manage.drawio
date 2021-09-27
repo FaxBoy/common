@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-27T02:27:28.918Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="dJaI9OmiPoqY2ukuhCcD" version="14.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-27T03:33:48.396Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="ZD7FQ__4HFRZ3Wx8cCpT" version="14.8.6" type="github">
   <diagram id="Ajt4dk3aIRRKyQv-2onF" name="Page-1">
     <mxGraphModel dx="1351" dy="923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -25,7 +25,7 @@
         <mxCell id="aoL08-PM75Ri6AFvirWw-12" value="Mysql" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="127" y="410" width="145" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="aoL08-PM75Ri6AFvirWw-13" value="Redis" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="aoL08-PM75Ri6AFvirWw-13" value="Redis" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;aspect=fixed;fillColor=#d0cee2;strokeColor=#56517e;labelBackgroundColor=none;labelBorderColor=none;whiteSpace=wrap;html=1;verticalAlign=middle;horizontal=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="127" y="510" width="145" height="70" as="geometry" />
         </mxCell>
         <mxCell id="aoL08-PM75Ri6AFvirWw-14" value="Es" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=20;" vertex="1" parent="1">
@@ -40,10 +40,10 @@
         <mxCell id="aoL08-PM75Ri6AFvirWw-18" value="Schema管理" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="359.5" y="427.5" width="120" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="aoL08-PM75Ri6AFvirWw-21" value="数据质检" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="aoL08-PM75Ri6AFvirWw-21" value="数据质检" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
           <mxGeometry x="358.5" y="482.5" width="120" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="aoL08-PM75Ri6AFvirWw-22" value="分布式id生成" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="aoL08-PM75Ri6AFvirWw-22" value="分布式id生成" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
           <mxGeometry x="358.5" y="540" width="120" height="35" as="geometry" />
         </mxCell>
         <mxCell id="aoL08-PM75Ri6AFvirWw-23" value="事务管理" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
@@ -52,7 +52,7 @@
         <mxCell id="aoL08-PM75Ri6AFvirWw-24" value="CRUD" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="358.5" y="655" width="120" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="aoL08-PM75Ri6AFvirWw-25" value="集群扩缩容" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="aoL08-PM75Ri6AFvirWw-25" value="集群扩缩容" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
           <mxGeometry x="580" y="315" width="120" height="35" as="geometry" />
         </mxCell>
         <mxCell id="aoL08-PM75Ri6AFvirWw-26" value="数据导出" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
@@ -61,10 +61,10 @@
         <mxCell id="aoL08-PM75Ri6AFvirWw-27" value="图可视化" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="580" y="427.5" width="120" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="aoL08-PM75Ri6AFvirWw-28" value="日志审计" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="aoL08-PM75Ri6AFvirWw-28" value="日志审计ELK" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="579" y="482.5" width="120" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="aoL08-PM75Ri6AFvirWw-29" value="数据归档" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="aoL08-PM75Ri6AFvirWw-29" value="数据归档" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
           <mxGeometry x="579" y="540" width="120" height="35" as="geometry" />
         </mxCell>
         <mxCell id="aoL08-PM75Ri6AFvirWw-34" value="存储" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
