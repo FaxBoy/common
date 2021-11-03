@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-03T06:28:24.706Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="InfvgQ7xRkdyof1Q6rp_" version="15.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-03T06:45:37.291Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="ZP4V4DCuHk5Vu_Gu2dUP" version="15.6.6" type="github">
   <diagram id="g6yYjkr6-7rxkAiS20dw" name="Page-1">
-    <mxGraphModel dx="1773" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2178" dy="923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,8 +13,8 @@
         <mxCell id="6HXKAiUreTgjCRLAevFc-123" value="" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=default;align=left;verticalAlign=middle;" parent="1" vertex="1">
           <mxGeometry x="-400" y="1179" width="810" height="760" as="geometry" />
         </mxCell>
-        <mxCell id="6HXKAiUreTgjCRLAevFc-122" value="" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=default;align=left;verticalAlign=middle;" parent="1" vertex="1">
-          <mxGeometry x="-290" y="2010" width="590" height="450" as="geometry" />
+        <mxCell id="6HXKAiUreTgjCRLAevFc-122" value="" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=default;align=left;verticalAlign=middle;strokeColor=default;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="-290" y="2010" width="590" height="500" as="geometry" />
         </mxCell>
         <mxCell id="6HXKAiUreTgjCRLAevFc-22" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startSize=14;endSize=14;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;" parent="1" source="6HXKAiUreTgjCRLAevFc-17" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -274,7 +274,10 @@
         <mxCell id="6HXKAiUreTgjCRLAevFc-115" value="过程数据处理" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fillColor=default;align=center;" parent="1" vertex="1">
           <mxGeometry x="-240" y="2180" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="6HXKAiUreTgjCRLAevFc-116" value="读取msg表中未处理的过程数据，进行update到dgraph" style="whiteSpace=wrap;html=1;fillColor=default;hachureGap=4;align=left;verticalAlign=middle;strokeColor=default;fontColor=default;" parent="1" vertex="1">
+        <mxCell id="lX6_4XrPIyhoqiOvHmS0-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=default;" edge="1" parent="1" source="6HXKAiUreTgjCRLAevFc-116" target="lX6_4XrPIyhoqiOvHmS0-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6HXKAiUreTgjCRLAevFc-116" value="pid的某个业务对象数据同步完成后触发过程数据同步" style="whiteSpace=wrap;html=1;fillColor=default;hachureGap=4;align=left;verticalAlign=middle;strokeColor=default;fontColor=default;" parent="1" vertex="1">
           <mxGeometry x="10" y="2155" width="200" height="130" as="geometry" />
         </mxCell>
         <mxCell id="6HXKAiUreTgjCRLAevFc-120" value="&lt;h1&gt;客资数据同步dgraph方案&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;历史数据&lt;/li&gt;&lt;li&gt;实时数据&lt;/li&gt;&lt;li&gt;同步过程中产生的增量数据&lt;/li&gt;&lt;li&gt;异常数据处理&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;hachureGap=4;pointerEvents=0;align=left;verticalAlign=middle;fontColor=default;" parent="1" vertex="1">
@@ -288,6 +291,9 @@
         </mxCell>
         <mxCell id="6HXKAiUreTgjCRLAevFc-126" value="&lt;h1&gt;历史数据执行顺序&lt;/h1&gt;&lt;p&gt;联系人和商机可以同时开启&lt;/p&gt;&lt;p&gt;联系人和商机执行完后，执行客户数据&lt;/p&gt;&lt;p&gt;最后执行线索数据&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;hachureGap=4;pointerEvents=0;align=left;verticalAlign=middle;" parent="1" vertex="1">
           <mxGeometry x="220" y="610" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lX6_4XrPIyhoqiOvHmS0-1" value="&lt;span&gt;读取msg表中未处理的过程数据，进行update到dgraph&lt;/span&gt;" style="whiteSpace=wrap;html=1;align=left;hachureGap=4;fillColor=default;strokeColor=default;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="2400" width="260" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
