@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-03T07:28:15.864Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="JFVrVu4SsqIKz1oQKNeu" version="15.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-03T07:30:11.374Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="6P1BhJqn62LIzLdmYupp" version="15.6.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1113" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F4F1DE" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="ZUxsnm-QVzawkIESuw82-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=25;fontColor=#393C56;strokeColor=#E07A5F;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="ZUxsnm-QVzawkIESuw82-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="用户提供mysql服务器的账号密码" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="连接用户提供mysql服务器的账号密码" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="185" y="490" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-11" value="sql转dql 数据写入dgraph" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=none;fillColor=#F2CC8F;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -19,25 +19,25 @@
         <mxCell id="ZUxsnm-QVzawkIESuw82-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=25;fontColor=#393C56;strokeColor=#E07A5F;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ZUxsnm-QVzawkIESuw82-1" target="ZUxsnm-QVzawkIESuw82-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZUxsnm-QVzawkIESuw82-1" value="用户mysql开启binglog" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZUxsnm-QVzawkIESuw82-1" value="开启mysql binlog" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="185" y="570" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZUxsnm-QVzawkIESuw82-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=25;fontColor=#393C56;strokeColor=#E07A5F;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ZUxsnm-QVzawkIESuw82-4" target="WIyWlLk6GJQsqaUBKTNV-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZUxsnm-QVzawkIESuw82-4" value="binglog监听、sql解析" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZUxsnm-QVzawkIESuw82-4" value="binlog监听、sql解析" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=1;glass=0;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="185" y="670" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZUxsnm-QVzawkIESuw82-10" value="存在的问题" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="399" y="490" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZUxsnm-QVzawkIESuw82-11" value="&lt;ol style=&quot;text-align: left ; font-size: 12px ; line-height: 1.5&quot;&gt;&lt;li&gt;访问外部服务器，并能读取文件，存在的网络和认证问题&lt;/li&gt;&lt;li&gt;如何让用户授权并开启binglog&lt;/li&gt;&lt;li&gt;读取binglog文件，并将数据同步到dgarph&lt;/li&gt;&lt;li&gt;binglog中特殊sql解析的复杂度&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#393C56;perimeterSpacing=3;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZUxsnm-QVzawkIESuw82-11" value="&lt;ol style=&quot;text-align: left ; font-size: 12px ; line-height: 1.5&quot;&gt;&lt;li&gt;访问外部服务器，并能读取文件，存在的网络和认证问题&lt;/li&gt;&lt;li&gt;如何让用户授权并开启binglog&lt;/li&gt;&lt;li&gt;读取binlog文件，并将数据同步到dgarph&lt;/li&gt;&lt;li&gt;binlog中特殊sql解析的复杂度&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#393C56;perimeterSpacing=3;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="355" y="510" width="360" height="100" as="geometry" />
         </mxCell>
         <mxCell id="ZUxsnm-QVzawkIESuw82-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=25;fontColor=#393C56;strokeColor=#E07A5F;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ZUxsnm-QVzawkIESuw82-14" target="ZUxsnm-QVzawkIESuw82-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZUxsnm-QVzawkIESuw82-14" value="申请客资的相关表进行binglog监控" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZUxsnm-QVzawkIESuw82-14" value="申请客资的相关表进行binlog监控" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="185" y="130" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="ZUxsnm-QVzawkIESuw82-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=25;fontColor=#393C56;strokeColor=#E07A5F;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ZUxsnm-QVzawkIESuw82-17" target="ZUxsnm-QVzawkIESuw82-19">
